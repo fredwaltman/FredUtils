@@ -7,7 +7,14 @@ final class FredUtilsTests: XCTestCase {
       XCTAssertEqual(color, .red)
     }
     
+    func testFredUtilColorsAreEqual() {
+    
+        let color = FredUtils.colorFromHexString("006736")
+        XCTAssertEqual(color, FredUtils.fredColor)
+    }
+    
     static var allTests = [
-      ("testColorRedEqual", testColorRedEqual)
+      ("testColorRedEqual", testColorRedEqual),
+        ("testFredUtilColorsAreEqual", testFredUtilColorsAreEqual)
     ]
 }

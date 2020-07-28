@@ -1,7 +1,7 @@
 
 import UIKit
 
-class FredUtils {
+public class FredUtils {
     
     /// Allows you to convert a 6 degit hexadecimal string unto a UIColor instance
     /// - Warning: The "#" symbol is stripped from the begining of the string submitted here
@@ -10,7 +10,8 @@ class FredUtils {
     ///   - alpha: Optional number between 0 and 1 indicating transparency
     /// - Returns: UIColor instance defined by the parameters
     
-    class func colorFromHexString(_ hexString: String, alpha: CGFloat = 1.0) -> UIColor {
+    internal class func colorFromHexString(_ hexString: String, alpha: CGFloat = 1.0) -> UIColor {
+        
       let r, g, b: CGFloat
       let offset = hexString.hasPrefix("#") ? 1 : 0
       let start = hexString.index(hexString.startIndex, offsetBy: offset)
@@ -26,4 +27,8 @@ class FredUtils {
       return UIColor(red: 0, green: 0, blue: 0, alpha: alpha)
     }
     
+    /// A nice color
+    public static var fredColor: UIColor {
+        return self.colorFromHexString("006736")
+    }
 }
