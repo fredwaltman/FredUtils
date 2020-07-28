@@ -1,5 +1,5 @@
 //
-//  FredUtils.swift
+//  Networking.swift
 //  FredUtils
 //
 //  Created by Fred Waltman on 7/28/20.
@@ -7,6 +7,9 @@
 
 import Foundation
 
-public struct FredUtils {
+extension FredUtils {
     
+    public class Networking {
+        
+    }
 }

@@ -1,22 +1,22 @@
 import XCTest
 @testable import FredUtils
 
-final class FredUtilsTests: XCTestCase {
+final class FredsColorTests: XCTestCase {
     func testColorRedEqual() {
-      let color = FredUtils.colorFromHexString("FF0000")
+        let color = FredUtils.Color.fromHexString("FF0000")
       XCTAssertEqual(color, .red)
     }
     
     func testFredUtilColorsAreEqual() {
     
-        let color = FredUtils.colorFromHexString("006736")
-        XCTAssertEqual(color, FredUtils.fredColor)
+        let color = FredUtils.Color.fromHexString("006736")
+        XCTAssertEqual(color, FredUtils.Color.fredColor)
     }
     
     func testSecondaryFredUtilColorsAreEqual() {
         
-        let color = FredUtils.colorFromHexString("FCFFFD")
-        XCTAssertEqual(color, FredUtils.secondaryColor)
+        let color = FredUtils.Color.fromHexString("FCFFFD")
+        XCTAssertEqual(color, FredUtils.Color.secondaryColor)
         
     }
     static var allTests = [
