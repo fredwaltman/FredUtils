@@ -31,4 +31,9 @@ public class FredUtils {
     public static var fredColor: UIColor {
         return self.colorFromHexString("006736")
     }
+    
+    /// Another nice color
+    public static var secondaryColor: UIColor {
+        return self.colorFromHexString("FCFFFD")
+    }
 }
