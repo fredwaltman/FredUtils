@@ -7,6 +7,20 @@
 
 import Foundation
 
+protocol NetworkSession {
+    func get(from url: URL, completionHandler: @escaping (Data?, Error?) -> Void)
+}
+
+extension URLSession: NetworkSession {
+    func get(from url: URL, completionHandler: @escaping (Data?, Error?) -> Void) {
+        let task = dataTask(with: url) {data, _, error in
+            completionHandler(data, error)
+        }
+        
+        task.resume()
+    }
+}
+
 extension FredUtils {
     
     public class Networking {
@@ -15,19 +29,20 @@ extension FredUtils {
         /// -Warning: Must create before using any public APIs
         
         public class Manager {
-            public init() {}
+             public init() {}
           
-            private let session = URLSession.shared
+            internal var session:  NetworkSession = URLSession.shared
+            
+            ///  Calld to the live internet to retrieve Data from a specific location
+            /// - Parameters:
+            ///   - url: url you wish to fetch
+            ///   - completionHandler: returns a result object which signifies the status of the request
             
             public func loadData(from url: URL, completionHandler: @escaping (NetworkResult<Data>) -> Void) {
-                let task = session.dataTask(with: url) { data, response, error in
+                session.get(from: url) { data, error in
                     let result = data.map(NetworkResult<Data>.success) ?? .failure(error)
                     completionHandler(result)
                 }
-                
-                task.resume()
-                
-                
             }
             
             public enum NetworkResult<Value> {
