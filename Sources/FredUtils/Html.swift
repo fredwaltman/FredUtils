@@ -27,7 +27,7 @@ extension FredUtils {
         ///   - htmlText: html text to convert
         ///   - returnCompletion: Returns a result object which signifies the status of the conversion
         
-        class func toAttributed(_ htmlText : String, returnCompletion: @escaping (ConversionResult<NSMutableAttributedString>) -> Void) {
+        public class func toAttributed(_ htmlText : String, returnCompletion: @escaping (ConversionResult<NSMutableAttributedString>) -> Void) {
             
             guard let data = htmlText.data(using: String.Encoding.utf8) else {
                 let err = makeError("Unable to decode data from html string: \(htmlText.prefix(300))", code: -3)

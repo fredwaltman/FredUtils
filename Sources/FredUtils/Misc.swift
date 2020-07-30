@@ -8,7 +8,6 @@
 import UIKit
 import CoreTelephony
 
-
 extension FredUtils {
     
     public class Misc {
@@ -96,7 +95,7 @@ extension FredUtils {
         ///   - isoCode: ISO country code of the app
         /// - Returns: formated phone number with appropriate prefix
         
-        class func buildPhoneNumber(_ number : String, with isoCode:String ) -> String {
+        public class func buildPhoneNumber(_ number : String, with isoCode:String ) -> String {
             var  phoneStr = ""
               
             var numbers = number.replacingOccurrences(of: " ", with: "")
