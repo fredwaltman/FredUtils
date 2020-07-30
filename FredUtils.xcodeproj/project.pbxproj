@@ -24,6 +24,9 @@
 		B6409C9624D0D72B00FA13EE /* FredUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6409C9524D0D72B00FA13EE /* FredUtils.swift */; };
 		B6409C9824D0D8ED00FA13EE /* FredsNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6409C9724D0D8ED00FA13EE /* FredsNetworkingTests.swift */; };
 		B6409C9A24D0DA0400FA13EE /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6409C9924D0DA0400FA13EE /* Networking.swift */; };
+		B6409C9D24D1537100FA13EE /* Html.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6409C9C24D1537100FA13EE /* Html.swift */; };
+		B6409C9F24D15EFF00FA13EE /* FredsHtmlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6409C9E24D15EFF00FA13EE /* FredsHtmlTests.swift */; };
+		B6409CA124D1C60500FA13EE /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6409CA024D1C60500FA13EE /* Misc.swift */; };
 		OBJ_23 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Color.swift */; };
 		OBJ_30 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_41 /* FredsColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* FredsColorTests.swift */; };
@@ -52,7 +55,11 @@
 		B6409C9524D0D72B00FA13EE /* FredUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FredUtils.swift; sourceTree = "<group>"; };
 		B6409C9724D0D8ED00FA13EE /* FredsNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FredsNetworkingTests.swift; sourceTree = "<group>"; };
 		B6409C9924D0DA0400FA13EE /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
-		"FredUtils::FredUtils::Product" /* FredUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FredUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6409C9B24D1280E00FA13EE /* FredUtils.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FredUtils.podspec; sourceTree = "<group>"; };
+		B6409C9C24D1537100FA13EE /* Html.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Html.swift; sourceTree = "<group>"; };
+		B6409C9E24D15EFF00FA13EE /* FredsHtmlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FredsHtmlTests.swift; sourceTree = "<group>"; };
+		B6409CA024D1C60500FA13EE /* Misc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
+		"FredUtils::FredUtils::Product" /* FredUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FredUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"FredUtils::FredUtilsTests::Product" /* FredUtilsTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = FredUtilsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_12 /* FredsColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FredsColorTests.swift; sourceTree = "<group>"; };
 		OBJ_13 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
@@ -93,6 +100,7 @@
 			children = (
 				OBJ_12 /* FredsColorTests.swift */,
 				B6409C9724D0D8ED00FA13EE /* FredsNetworkingTests.swift */,
+				B6409C9E24D15EFF00FA13EE /* FredsHtmlTests.swift */,
 				OBJ_13 /* XCTestManifests.swift */,
 			);
 			name = FredUtilsTests;
@@ -108,16 +116,16 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
+				B6409C9B24D1280E00FA13EE /* FredUtils.podspec */,
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_10 /* Tests */,
 				OBJ_14 /* Products */,
 				OBJ_17 /* README.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -131,9 +139,11 @@
 		OBJ_8 /* FredUtils */ = {
 			isa = PBXGroup;
 			children = (
+				B6409C9524D0D72B00FA13EE /* FredUtils.swift */,
 				OBJ_9 /* Color.swift */,
 				B6409C9924D0DA0400FA13EE /* Networking.swift */,
-				B6409C9524D0D72B00FA13EE /* FredUtils.swift */,
+				B6409C9C24D1537100FA13EE /* Html.swift */,
+				B6409CA024D1C60500FA13EE /* Misc.swift */,
 			);
 			name = FredUtils;
 			path = Sources/FredUtils;
@@ -205,7 +215,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_14 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -225,6 +235,8 @@
 			files = (
 				B6409C9A24D0DA0400FA13EE /* Networking.swift in Sources */,
 				B6409C9624D0D72B00FA13EE /* FredUtils.swift in Sources */,
+				B6409C9D24D1537100FA13EE /* Html.swift in Sources */,
+				B6409CA124D1C60500FA13EE /* Misc.swift in Sources */,
 				OBJ_23 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,6 +256,7 @@
 				OBJ_41 /* FredsColorTests.swift in Sources */,
 				OBJ_42 /* XCTestManifests.swift in Sources */,
 				B6409C9824D0D8ED00FA13EE /* FredsNetworkingTests.swift in Sources */,
+				B6409C9F24D15EFF00FA13EE /* FredsHtmlTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +286,7 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = FredUtils.xcodeproj/FredUtils_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "$(inherited)";
@@ -283,8 +296,10 @@
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TARGET_NAME = FredUtils;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
@@ -301,7 +316,7 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = FredUtils.xcodeproj/FredUtils_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "$(inherited)";
@@ -311,8 +326,10 @@
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TARGET_NAME = FredUtils;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
@@ -356,8 +373,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				USE_HEADERMAP = NO;
@@ -442,8 +459,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				USE_HEADERMAP = NO;
