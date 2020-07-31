@@ -12,7 +12,7 @@ extension FredUtils {
     
     public class Email {
         
-        class func makeMailComposeViewControllerOfType(type : String,
+        public class func makeMailComposeViewControllerOfType(type : String,
                                                        about subject : String,
                                                        with info: [String : String]) -> MFMailComposeViewController {
             var to: String
@@ -84,7 +84,7 @@ extension FredUtils {
             return mailComposerVC
         }
         
-        class func makeSendMailErrorAlert() -> UIAlertController {
+        public class func makeSendMailErrorAlert() -> UIAlertController {
             let sendMailErrorAlert = UIAlertController(title: "Could Not Send Email",
                                                        message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", preferredStyle: .alert)
             
