@@ -27,6 +27,7 @@
 		B6409C9D24D1537100FA13EE /* Html.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6409C9C24D1537100FA13EE /* Html.swift */; };
 		B6409C9F24D15EFF00FA13EE /* FredsHtmlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6409C9E24D15EFF00FA13EE /* FredsHtmlTests.swift */; };
 		B6409CA124D1C60500FA13EE /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6409CA024D1C60500FA13EE /* Misc.swift */; };
+		B6960E8324D48AC200A57F3C /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6960E8224D48AC200A57F3C /* Email.swift */; };
 		OBJ_23 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Color.swift */; };
 		OBJ_30 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_41 /* FredsColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* FredsColorTests.swift */; };
@@ -59,6 +60,7 @@
 		B6409C9C24D1537100FA13EE /* Html.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Html.swift; sourceTree = "<group>"; };
 		B6409C9E24D15EFF00FA13EE /* FredsHtmlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FredsHtmlTests.swift; sourceTree = "<group>"; };
 		B6409CA024D1C60500FA13EE /* Misc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
+		B6960E8224D48AC200A57F3C /* Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
 		"FredUtils::FredUtils::Product" /* FredUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FredUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"FredUtils::FredUtilsTests::Product" /* FredUtilsTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = FredUtilsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_12 /* FredsColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FredsColorTests.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				B6409C9924D0DA0400FA13EE /* Networking.swift */,
 				B6409C9C24D1537100FA13EE /* Html.swift */,
 				B6409CA024D1C60500FA13EE /* Misc.swift */,
+				B6960E8224D48AC200A57F3C /* Email.swift */,
 			);
 			name = FredUtils;
 			path = Sources/FredUtils;
@@ -235,6 +238,7 @@
 			files = (
 				B6409C9A24D0DA0400FA13EE /* Networking.swift in Sources */,
 				B6409C9624D0D72B00FA13EE /* FredUtils.swift in Sources */,
+				B6960E8324D48AC200A57F3C /* Email.swift in Sources */,
 				B6409C9D24D1537100FA13EE /* Html.swift in Sources */,
 				B6409CA124D1C60500FA13EE /* Misc.swift in Sources */,
 				OBJ_23 /* Color.swift in Sources */,

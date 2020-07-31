@@ -98,7 +98,7 @@ extension FredUtils {
         public class func buildPhoneNumber(_ number : String, with isoCode:String ) -> String {
             var  phoneStr = ""
               
-            var numbers = number.replacingOccurrences(of: " ", with: "")
+            var numbers = onlyDigits(number)
             
             if  numbers.prefix(1) == "0" || numbers.prefix(1) == "1" {
                 numbers = String(numbers.dropFirst())
@@ -148,6 +148,11 @@ extension FredUtils {
             UIGraphicsEndImageContext()
             
             return newImage
+        }
+        
+        internal class func onlyDigits(_ number: String) -> String {
+            let filtredUnicodeScalars = number.unicodeScalars.filter { CharacterSet.decimalDigits.contains($0) }
+            return String(String.UnicodeScalarView(filtredUnicodeScalars))
         }
     }
 }
