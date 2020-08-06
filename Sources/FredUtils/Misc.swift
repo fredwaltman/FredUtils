@@ -98,7 +98,9 @@ extension FredUtils {
         public class func buildPhoneNumber(_ number : String, with isoCode:String ) -> String {
             var  phoneStr = ""
              
-            #if os(iOS)
+            #if targetEnvironment(macCatalyst)
+              return number
+            #else
             var numbers = onlyDigits(number)
             
             if  numbers.prefix(1) == "0" || numbers.prefix(1) == "1" {
@@ -131,9 +133,8 @@ extension FredUtils {
             }
             
             return phoneStr
-            #else
-                return number
             #endif
+
         }
         
         /// Reize an image to the specified width
